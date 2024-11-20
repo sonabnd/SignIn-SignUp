@@ -1,7 +1,7 @@
 import { Button } from "antd";
 import { useButtonStyles } from "./submit-button-style";
 
-const ButtonComponent: React.FC<ButtonComponentProps> = ({children,className,htmlType,onClick}) => {
+const ButtonComponent = ({children,className,htmlType,onClick}: ButtonComponentProps) => {
     const classes = useButtonStyles()
 
     return (
