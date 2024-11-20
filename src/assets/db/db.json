@@ -90,6 +90,34 @@
       "username": "Sona",
       "contactNumber": "123",
       "password": "123"
+    },
+    {
+      "id": "2b01",
+      "email": "qwe",
+      "username": "wsedrft",
+      "contactNumber": "234",
+      "password": "1111"
+    },
+    {
+      "id": "9340",
+      "email": "12",
+      "username": "qqwe",
+      "contactNumber": "23",
+      "password": "11"
+    },
+    {
+      "id": "dc4e",
+      "email": "123",
+      "username": "sdfr",
+      "contactNumber": "sdf",
+      "password": "üert"
+    },
+    {
+      "id": "92bb",
+      "email": "bndsona",
+      "username": "edededed",
+      "contactNumber": "23",
+      "password": "123"
     }
   ]
 }

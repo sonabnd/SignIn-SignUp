@@ -9,13 +9,16 @@ const sizes = {
     title: 55,
     inputText: 14,
     homepageBorderRadius: 40,
+    signModal: '50%',
+    maxWidth: '100%',
+    pcLittleText: 16,
+    thinWeight: 400,
+    mediumFontWeight: 500,
     mobileTitle: 40,
     mobileInputLabel: 14,
     mobilePlaceholder: 13,
-    // borderRadiusSm: 6,
-    // borderRadiusCircle: '50%',
-    // leftMenu: 230,
-    // leftMenuSpacing: 81,
+    mobileMediaSize: 768,
+    mobileLitteText: 11,
 };
 
 export default sizes;

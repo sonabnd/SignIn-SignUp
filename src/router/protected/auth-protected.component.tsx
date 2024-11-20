@@ -1,19 +1,9 @@
-import { useEffect } from 'react'
 import { IAuthProtectedRouteProps } from './auth.protected';
 import { Routes } from '../router';
 import { Navigate } from 'react-router-dom';
 import { getToken } from '../../core/helpers/get-token';
 
-
-
 const AuthProtectedComponent = ({ children, layout = 'public' }: IAuthProtectedRouteProps) => {
-  useEffect(()=>{
-    const token = getToken();
-    if(token){
-      console.log(token);
-    }
-  }, [])
-  
 
   switch (layout) {
     case 'auth':

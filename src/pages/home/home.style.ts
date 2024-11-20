@@ -1,11 +1,12 @@
-import { createUseStyles } from "react-jss";
-import colors from "../../assets/styles/abstracts/color";
-import { rem } from "../../assets/styles/abstracts/functions";
-import sizes from "../../assets/styles/abstracts/sizes";
+import { createUseStyles } from 'react-jss';
+import colors from '../../assets/styles/abstracts/color';
+import { rem } from '../../assets/styles/abstracts/functions';
+import sizes from '../../assets/styles/abstracts/sizes';
+import { breakpoint } from '../../assets/styles/abstracts/mixins';
 
 const styles = {
   homepageContainer: {
-    width: '100%',
+    width: sizes.maxWidth,
     height: '100vh',
     display: 'flex',
     justifyContent: 'center',
@@ -16,7 +17,7 @@ const styles = {
     backgroundColor: colors.mainBg,
     width: '50%',
     height: '100%',
-    '@media (max-width: 768px)': {
+    [breakpoint(sizes.mobileMediaSize)]: {
       display: 'none',
     },
   },
@@ -30,7 +31,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    '@media (max-width: 768px)': {
+    [breakpoint(sizes.mobileMediaSize)]: {
       width: '90%', 
       height: rem(741), 
       top: '10%',
@@ -44,16 +45,16 @@ const styles = {
     alignItems: 'center',
     '& h3': {
       fontSize: sizes.title,
-      fontWeight: '500',
+      fontWeight: sizes.mediumFontWeight,
     },
     '& h2': {
       fontSize: sizes.title,
       color: colors.mainColor,
       marginTop: rem(16),
       marginBottom: rem(82.5),
-      fontWeight: '500',
+      fontWeight: sizes.mediumFontWeight,
     },
-    '@media (max-width: 768px)': {
+    [breakpoint(sizes.mobileMediaSize)]: {
       width: '90%', 
       '& h3': {
         fontSize: sizes.mobileTitle, 
@@ -68,9 +69,9 @@ const styles = {
   logOutButton: {
     backgroundColor: colors.mainColor,
     color: colors.signModalColor,
-    fontWeight: '500',
+    fontWeight: sizes.thinWeight,
     textAlign: 'center',
-    '@media (max-width: 768px)': {
+    [breakpoint(sizes.mobileMediaSize)]: {
       width: '70%', 
     },
   },

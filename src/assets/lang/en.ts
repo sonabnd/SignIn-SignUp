@@ -13,12 +13,10 @@ export const en = {
     sign_or : 'OR',
     logout: 'Logout',
     signInError: 'The password or password is incorrect',
-
-    input_required: 'Bu xana mütləqdir',
-    input_min_length: 'Ən azı {min} simvol olmalıdır',
-    email_invalid: 'Email düzgün deyil',
-    //components
-    login_sign_in_button: 'Daxil ol',
-    login_title: 'Daxil ol',
-    login_subtitle: 'Davam etmək üçün hesabınıza daxil olun.',
+    signInInvalid: 'Invalid email or password!',
+    signInEmptyEmail: 'Please enter your username or email!',
+    signInEmptPassword: 'Please enter your password!',
+    emptyContactNumber: 'Please enter your contact number!',
+    homepageWelcomeText: 'Welcome',
+    logo: 'Your Logo'
 };

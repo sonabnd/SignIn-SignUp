@@ -1,4 +1,4 @@
-import axios, {AxiosResponse, InternalAxiosRequestConfig} from 'axios';
+import axios from 'axios';
 import { enviroment } from './app.config';
 
 const axiosInstance = axios.create({

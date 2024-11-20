@@ -1,7 +1,8 @@
-import { createUseStyles } from "react-jss";
-import { rem } from "../../assets/styles/abstracts/functions";
-import sizes from "../../assets/styles/abstracts/sizes";
-import colors from "../../assets/styles/abstracts/color";
+import { createUseStyles } from 'react-jss';
+import { rem } from '../../assets/styles/abstracts/functions';
+import sizes from '../../assets/styles/abstracts/sizes';
+import colors from '../../assets/styles/abstracts/color';
+import { breakpoint } from '../../assets/styles/abstracts/mixins';
 
 const styles = {
   signModal: {
@@ -9,74 +10,75 @@ const styles = {
     height: rem(741),
     borderRadius: sizes.signBorderRadius,
     backgroundColor: colors.signModalColor,
-    position: "absolute",
+    position: 'absolute',
     top: rem(48),
-    left: "50%",
-    transform: "translateX(-50%)",
-    boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+    left: sizes.signModal,
+    transform: 'translateX(-50%)',
+    boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
     padding: rem(36),
-    "@media (max-width: 768px)": {
-      width: "90%",
+    [breakpoint(sizes.mobileMediaSize)]: {
+      width: '90%',
     },
   },
   welcomeText: {
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    alignItems: "center",
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center',
     marginTop: rem(40),
-    "& p": {
+    '& p': {
       fontSize: sizes.text,
-      '@media (max-width: 768px)':{
+      [breakpoint(sizes.mobileMediaSize)]:{
             fontSize: rem(16),
         }
     },
-    "& h2": {
+    '& h2': {
       fontSize: sizes.title,
       lineHeight: rem(82.5),
-      '@media (max-width: 768px)':{
+      [breakpoint(sizes.mobileMediaSize)]:{
             fontSize: sizes.mobileTitle,
         }   
     },
   },
   inputLarge: {
-    width: "100%",
+    width: sizes.maxWidth,
     height: rem(57),
     borderRadius: sizes.signInputRadius,
-    "&::placeholder": {
+    '&::placeholder': {
       color: colors.inputTextColor,
-      "@media (max-width: 768px)": {
+      [breakpoint(sizes.mobileMediaSize)]: {
         fontSize: sizes.mobilePlaceholder,
       },
     },
   },
   orText: {
-    textAlign: "center",
+    textAlign: 'center',
     marginBottom: rem(24),
     marginTop: rem(24),
+    
   },
   signInButton: {
-    backgroundColor: "#FFA500",
-    borderColor: "#FFA500",
-    color: "#fff",
-    '@media (max-width: 768px)':{
-        fontSize: rem(16)
+    backgroundColor: colors.signInBgColor,
+    borderColor: colors.signInBgColor,
+    color: colors.buttonColor,
+    [breakpoint(sizes.mobileMediaSize)]:{
+        fontSize: rem(sizes.pcLittleText)
     }
   },
   signUpButton: {
-    backgroundColor: "#FFF4E3",
-    borderColor: "#FFF4E3",
-    color: "#BC7E23",
+    backgroundColor: colors.signUpButtonInSignIn,
+    borderColor: colors.signUpButtonInSignIn,
+    color: colors.signUpButtonColor,
     boxShadow: '0px 0px 0px 0px',
-    '@media (max-width: 768px)':{
-        fontSize: rem(16)
+    [breakpoint(sizes.mobileMediaSize)]:{
+        fontSize: rem(sizes.pcLittleText)
     }
   },
   formItem: {
-    "& .ant-form-item-label > label": {
-      fontSize: rem(16),
-      weight: 400,
-      "@media (max-width: 768px)": {
+    '& .ant-form-item-label > label': {
+      fontSize: rem(sizes.pcLittleText),
+      weight: sizes.thinWeight,
+      [breakpoint(sizes.mobileMediaSize)]: {
         fontSize: sizes.mobileInputLabel,
       },
     },
@@ -88,15 +90,15 @@ const styles = {
     marginTop: rem(30),
   },
   forgotPass: {
-    color: "#AD3113",
-    cursor: "pointer",
-    '@media (max-width: 768px)':{
-        fontSize: rem(11)
+    color: colors.forgotTextColor,
+    cursor: 'pointer',
+    [breakpoint(sizes.mobileMediaSize)]:{
+        fontSize: rem(sizes.mobileLitteText)
     }
   },
   forgotPassContainer: {
-    display: "flex",
-    justifyContent: "flex-end",
+    display: 'flex',
+    justifyContent: 'flex-end',
   },
 };
 

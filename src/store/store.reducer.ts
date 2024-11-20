@@ -1,9 +1,8 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IState } from "./store";
-import { en } from "../assets/lang/en";
+import { createSlice } from '@reduxjs/toolkit';
+import { IState } from './store';
+import { en } from '../assets/lang/en';
 const initialState: IState = {
     loader: false,
-    leftMenu: true,
     languages: [
         {
             id: 1,
@@ -27,7 +26,7 @@ export const rootSlice = createSlice({
     name: 'root',
     initialState,
     reducers: {
-        setUser: (state: IState, action: PayloadAction<any>) => {
+        setUser: (state: IState) => {
             state.user = 'user';
         }
     }
