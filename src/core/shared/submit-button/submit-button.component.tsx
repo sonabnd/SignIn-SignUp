@@ -1,5 +1,5 @@
-import { Button } from "antd";
-import { useButtonStyles } from "./submit-button-style";
+import { Button } from 'antd';
+import { useButtonStyles } from './submit-button-style';
 
 const ButtonComponent = ({children,className,htmlType,onClick}: ButtonComponentProps) => {
     const classes = useButtonStyles()

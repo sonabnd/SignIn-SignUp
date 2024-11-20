@@ -1,6 +1,6 @@
-import { createUseStyles } from "react-jss";
-import sizes from "../../../assets/styles/abstracts/sizes";
-import { rem } from "../../../assets/styles/abstracts/functions";
+import { createUseStyles } from 'react-jss';
+import sizes from '../../../assets/styles/abstracts/sizes';
+import { rem } from '../../../assets/styles/abstracts/functions';
 
 const styles = {
     button: {
